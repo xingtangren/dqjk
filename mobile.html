@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>dqjk</title>
+    <script src="./jquery-1.7.1.min.js"></script>
+    <style>
+            .btndiv{
+
+            }
+            .btndiv input{
+                width:75px;
+                                height:30px;
+                                margin:5px;
+                display:inline-block;
+                outline:0 none !important;
+            }
+            .activeBtn{
+                background: #409EFF;
+                color:#fff;
+                border:solid 1px #000;
+            }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="iframeDiv" style="height:500px;overflow: hidden;">
+        <iframe id="iframe" src="" scrolling="no" style="width:100%;height:100%" frameborder="0"></iframe>
+    </div>
+        <div class="btndiv">
+                <input type="button" value="udp01" onclick="changeCarama('udp01')" udp="udp01"></input>
+                <input type="button" value="udp02" onclick="changeCarama('udp02')" udp="udp02"></input>
+                <input type="button" value="udp03" onclick="changeCarama('udp03')" udp="udp03"></input>
+                <input type="button" value="udp04" onclick="changeCarama('udp04')" udp="udp04"></input>
+                <input type="button" value="udp05" onclick="changeCarama('udp05')" udp="udp05"></input>
+                <input type="button" value="udp06" onclick="changeCarama('udp06')" udp="udp06"></input>
+                <input type="button" value="udp07" onclick="changeCarama('udp07')" udp="udp07"></input>
+                <input type="button" value="udp08" onclick="changeCarama('udp08')" udp="udp08"></input>
+                <input type="button" value="udp09" onclick="changeCarama('udp09')" udp="udp09"></input>
+                <input type="button" value="udp10" onclick="changeCarama('udp10')" udp="udp10"></input>
+                <input type="button" value="udp11" onclick="changeCarama('udp11')" udp="udp11"></input>
+                <input type="button" value="udp12" onclick="changeCarama('udp12')" udp="udp12"></input>
+                <input type="button" value="udp13" onclick="changeCarama('udp13')" udp="udp13"></input>
+                <input type="button" value="udp14" onclick="changeCarama('udp14')" udp="udp14"></input>
+                <input type="button" value="udp15" onclick="changeCarama('udp15')" udp="udp15"></input>
+                <input type="button" value="udp16" onclick="changeCarama('udp16')" udp="udp16"></input>
+                <input type="button" value="udp17" onclick="changeCarama('udp17')" udp="udp17"></input>
+                <input type="button" value="udp18" onclick="changeCarama('udp18')" udp="udp18"></input>
+                <input type="button" value="udp19" onclick="changeCarama('udp19')" udp="udp19"></input>
+                <input type="button" value="udp20" onclick="changeCarama('udp20')" udp="udp20"></input>
+                <input type="button" value="udp21" onclick="changeCarama('udp21')" udp="udp21"></input>
+                <input type="button" value="udp22" onclick="changeCarama('udp22')" udp="udp22"></input>
+                <input type="button" value="udp23" onclick="changeCarama('udp23')" udp="udp23"></input>
+        </div>
+
+      <script type="text/javascript">
+                    $(function(){
+                        setActiveClass("udp23");
+                        changeCarama("udp23");
+                    }); 
+                    function changeCarama(udpName){
+                        $("#iframe").attr("src","//dqllll.rbkj.net:32/index.html?id="+udpName+"&class="+udpName+"&camera="+udpName+"&udp="+udpName);
+                        setActiveClass(udpName);
+                    }
+                    function setActiveClass(udpName){
+                        $(".btndiv").find("input").removeClass("activeBtn");
+                        $(".btndiv").find("input[udp='"+udpName+"']").addClass("activeBtn");
+                    }
+
+      </script>
+</body>
+</html>
